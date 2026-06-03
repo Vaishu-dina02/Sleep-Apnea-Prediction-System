@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Sleep Apnea Prediction Result</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f4f4f4, #ffffff);
+      margin: 0;
+      padding: 50px 20px;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 100%;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h1 {
+      font-size: 36px;
+      color: #1d3557;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    .result-box {
+      background-color: #e3f2fd;
+      padding: 15px;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #d62828;
+      margin-bottom: 15px;
+    }
+    .charts-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .chart-box {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+    .recommendation, .nutrition-advice {
+      background-color: #f1f1f1;
+      padding: 15px;
+      border-radius: 6px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    .nutrition-advice {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 10px;
+      border: none;
+      background-color: #d62828;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .graph-container {
+    margin-bottom: 200px; /* Adjust this value as needed */
+}
+
+.graph-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Adjust spacing between graphs */
+}
+
+
+    .btn:hover {
+      background-color: #b22222;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sleep Apnea Prediction Result</h1>
+    <div class="result-box">Sleep Quality: <span id="sleepQuality">{{ sleep_quality }}</span></div>
+    <div class="result-box">Predicted AHI: <span id="predictedAHI">{{ prediction }}</span></div>
+    <div class="result-box">Calculated BMI: <span id="calculatedBMI">{{ bmi }}</span></div>
+    <div class="charts-container">
+      <div class="chart-box">
+        <canvas id="sleepQualityChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <canvas id="ahiBmiChart"></canvas>
+      </div>
+    </div><br><br>
+    {% if recommendation %}
+      <div class="recommendation">
+        <h2>Doctor's Recommendation:</h2>
+        <p>{{ recommendation }}</p>
+      </div>
+    {% endif %}
+    {% if nutrition_advice %}
+      <div class="nutrition-advice">
+        <h2>Personalized Nutrition & Sleep Advice:</h2>
+        <p>{{ nutrition_advice }}</p>
+      </div>
+    {% endif %}
+    <button class="btn" onclick="speakAdvice()">🔊 On</button>
+    <button class="btn" onclick="pauseResume()">⏸️ Pause / ▶️ Resume</button>
+    <button class="btn" onclick="stopSpeaking()">⏹️ Stop</button>
+    <a href="/" class="btn">Make Another Prediction</a>
+  </div>
+  <script>
+    let speech = new SpeechSynthesisUtterance();
+    let isPaused = false;
+    function speakAdvice() {
+      let adviceText = document.querySelector(".nutrition-advice p").innerText;
+      speech.text = adviceText;
+      speech.volume = 1;
+      speech.rate = 1;
+      speech.pitch = 1;
+      speech.lang = "en-US";
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(speech);
+      isPaused = false;
+    }
+    function pauseResume() {
+      if (window.speechSynthesis.speaking) {
+        if (!isPaused) {
+          window.speechSynthesis.pause();
+          isPaused = true;
+        } else {
+          window.speechSynthesis.resume();
+          isPaused = false;
+        }
+      }
+    }
+    function stopSpeaking() {
+      window.speechSynthesis.cancel();
+      isPaused = false;
+    }
+    var sleepQuality = parseFloat(document.getElementById("sleepQuality").innerText) || 0;
+    var predictedAHI = parseFloat(document.getElementById("predictedAHI").innerText) || 0;
+    var calculatedBMI = parseFloat(document.getElementById("calculatedBMI").innerText) || 0;
+    new Chart(document.getElementById("sleepQualityChart").getContext("2d"), {
+      type: "doughnut",
+      data: {
+        labels: ["Sleep Quality", "Remaining"],
+        datasets: [{ data: [sleepQuality, 100 - sleepQuality], backgroundColor: ["#2ecc71", "#e0e0e0"] }]
+      },
+      options: { cutout: "70%", plugins: { legend: { display: false }, title: { display: true, text: "Sleep Quality (%)" } } }
+    });
+    new Chart(document.getElementById("ahiBmiChart").getContext("2d"), {
+      type: "bar",
+      data: {
+        labels: ["Predicted AHI", "Calculated BMI"],
+        datasets: [{ data: [predictedAHI, calculatedBMI], backgroundColor: ["#007bff", "#ff5733"] }]
+      },
+      options: { scales: { y: { beginAtZero: true } }, plugins: { title: { display: true, text: "AHI vs BMI Comparison" } } }
+    });
+  </script>
+</body>
+</html>

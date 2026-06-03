@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs & Articles</title>
+</head>
+    <a href="firstpage.html"></a>
+
+    <style>
+        body{
+        height: 100vh;  
+        display: flex; 
+        justify-content: center;  
+        align-items : flex-start;
+        margin:0;
+        font-family: Arial, sans-serif;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-in-out forwards;
+        background: linear-gradient(to right, #f4f4f4, #e8e8e8);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .hover-box-1 {
+            width: 795px;  
+            height: 200px;  
+            background: linear-gradient(135deg, #ffffff, #f8f8f8);
+            background-color: #f0f0f0;  
+            border: 2px solid #ccc;  
+            display: flex;
+            color:#00447C;
+            padding-top: 27px;
+            font-size: 25px;
+            justify-content: center;  
+            transition: background-color 0.3s ease, transform 0.3s ease; 
+            border-radius: 13px;
+            margin-top: 50px;
+            position: relative;
+            text-decoration: none; /* Ensures no underline */
+            list-style: none;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        /* Specifically target links inside the hover box */
+        .hover-box-1 a {
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Ensures text color remains unchanged */
+        }
+                
+        .hover-box-1:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+            background: rgba(255, 255, 255, 0.85);
+        }
+        
+        .address-1{
+            font-size:15px;
+            padding-bottom: 5px;
+            margin-top:150px;
+            bottom:60px;
+            left:25px;
+            text-align:left;
+            position:absolute;
+            cursor:pointer;
+            color:black;
+            font-weight:Lighter;
+            font-family: Arial, sans-serif;
+        }
+        .location-logo {
+            position: absolute;  
+            bottom: 30px;  
+            left: 10px; 
+            width: 30px;  
+            height: 30px;  
+            cursor:pointer;
+        }
+
+        .top-left {
+            background: linear-gradient(to right, #ffffff, #e0f7fa);
+        }
+    
+        .top-left-2 {
+            background: linear-gradient(to right, #ffffff, #ffecb3);
+        }
+    
+        .top-left-3 {
+            background: linear-gradient(to right, #ffffff, #e1bee7);
+        }
+
+
+        .top-left {
+            width: 30%;
+            max-width: 800px;
+            padding: 5px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease-in-out;
+            position: relative;
+            background: white;
+            display: flex; /* Enables flexbox */
+            align-items: center; /* Aligns content vertically */
+            justify-content: space-between; /* Pushes text to left and image to right */
+            overflow: hidden;
+            left:22%;
+            height:80%;
+        }
+        
+        .top-left img {
+            max-width: 150px; /* Adjust image width as needed */
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+
+
+        .top-left-2 {
+            width: 30%;
+            max-width: 800px;
+            padding: 5px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease-in-out;
+            position: relative;
+            background: white;
+            display: flex; /* Enables flexbox */
+            align-items: center; /* Aligns content vertically */
+            justify-content: space-between; /* Pushes text to left and image to right */
+            overflow: hidden;
+            left:10%;
+            height:80%;
+        }
+        
+        .top-left-2 img {
+            max-width: 150px; /* Adjust image width as needed */
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+
+
+        .top-left-3 {
+            width: 30%;
+            max-width: 800px;
+            padding: 5px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease-in-out;
+            position: relative;
+            background: white;
+            display: flex; /* Enables flexbox */
+            align-items: center; /* Aligns content vertically */
+            justify-content: space-between; /* Pushes text to left and image to right */
+            overflow: hidden;
+            left:16%;
+            height:80%;
+        }
+        
+        .top-left-3 img {
+            max-width: 150px; /* Adjust image width as needed */
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .source{
+            position: absolute;
+            bottom: 20px; /* Adjust spacing from the bottom of the box */
+            left: 20px; /* Align with the summary text */
+            font-size: 14px; /* Smaller font for the source */
+            color: #777; /* Lighter gray color for the source */
+        }
+    
+    </style>
+<body>
+
+
+
+    <p><a href="fistpage.html"></a></p>
+    <div>
+    <div class="hover-box-1">
+        <a href="https://www.resmed.co.in/blogs/indians-suffering-from-sleep-apnea" class="gg-hospital">Sleep Apnea</a><br><br><br>
+        <img src="blog_3.jpg " class="top-left">
+
+        <p class="address-1">Deep Apne's webpage offers sleep apnea information, including its link to<br> weight gain and women's REM-related risks. Contact details, social media<br>links, and a search bar are provided. Copyright info is also displayed.
+        </p>
+        <p class="source">SOURCE : RESMED
+        </p>
+    </div>
+
+
+
+
+    <!--Second box--> 
+
+    <div class="hover-box-1">
+        <a href="https://houstonsleepsolutions.com/blog/sleep-apnea-and-weight-gain-what-you-need-to-know-for-weight-loss-success/" class="y-hospital">Sleep Apnea And Weight Gain</a><br><br><br>
+        <img src="blog_2.png" class="top-left-2">
+
+        <p class="address-1">ApneaInSight360 offers information on sleep apnea, including its link to<br> weight gain and gender-specific risks.  The site provides contact details, a<br> chat feature, and resources like blogs and articles.  A search bar and<br> copyright information are included in the footer.
+        </p>
+        <p class="source">SOURCE : HOUSTON SLEEP SOLUTION
+        </p>
+    </div>
+
+    
+
+    <!--Fourth box-->
+    <div class="hover-box-1">
+        <a href="https://www.itamar-medical.com/2024/10/27/is-sleep-apnea-in-women-underdiagnosed-and-undertreated/" class="meenakshi-hospital">Sleep Apnea In Women</a><br><br><br>
+        <img src="blog_1.jpg" class="top-left-3">
+
+        <p class="address-1">Women with sleep apnea are more prone to breathing disruptions during<br> REM 
+            sleep (about 20% of total sleep time).While this might mean fewer<br> overall apneas 
+            compared to men, the apneas women experience during<br> REM sleep tend to be 
+            more severe, lasting longer and causing greater drops<br> in blood oxygen levels.
+        </p>
+        <p class="source">SOURCE : ITAMAR
+        </p>
+    </div>
+</div>
+</body>
+</html>

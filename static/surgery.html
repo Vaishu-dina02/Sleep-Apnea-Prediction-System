@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positional</title>
+    <a href="treat.html"></a>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 50px 20px;
+            color: #2c3e50;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            opacity: 0;
+            animation: fadeInPage 1.5s ease-in-out forwards;
+        }
+
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            max-width: 900px;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.75);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #1d3557;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #444;
+            margin-top: 5px;
+        }
+
+        /* Page Load Animation */
+        @keyframes fadeInPage {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Hover & Fade-In Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+
+    <div class="info-container">
+        <br><div class="info-box">
+            <h2>Nasal Surgery</h2>
+            <p>Obstruction of the nasal cavity, due to a deviated septum, enlarged turbinates, nasal valve collapse or nasal polyps all can contribute to poor sleep and mouthbreathing, which makes sleep apnea and snoring worse. Septoplasty, reduction of the inferior turbinates, nasal valve stabilization and sinus surgery are all surgeries that can improve airway obstruction at this level.  </p>
+        </div>
+
+        <div class="info-box">
+            <h2>Palate & Pharyngeal Surgery</h2>
+            <p>The soft palate, or the arch of tissue in the back of the throat, just in front of the back wall of the throat, is one of the most common areas of obstruction in snoring and sleep apnea. The lateral pharyngeal walls (or side walls of the throat), are also often involved in obstruction, as are the tonsils. There are many surgeries that can be performed at this level, and each is custom tailored to a patient’s unique anatomy. These surgeries include:
+
+                Expansion Sphincter Pharyngoplasty
+                Uvulopalatoplasty
+                Transpalatal Advancement Pharyngoplasty
+                Lateral Pharyngoplasty
+                Radiofrequency Ablation of the Palate
+                Pillar Implants</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Tongue Base Surgery</h2>
+            <p>Another very common site for upper airway obstruction is at the middle or back of the tongue. Due to the structure of the jaw, the physiology of the muscles of the tongue and throat, and the size of the tissue at the back of the tongue, many people have collapse of the airway at this level during sleep. Depending on a patient’s anatomy at this site, there are many surgeries that can be performed.
+
+                Lingual Tonsillectomy
+                Partial Midline Glossectomy and Tongue Reduction
+                Radiofrequency Ablation of the Tongue Base</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Upper Airway Stimulation Therapy</h2>
+            <p>Dr. Phillips is proud to be one of very few physicians in Florida to offer this exciting and groundbreaking new therapy for sleep apnea. Inspire ® upper airway stimulation is a minimally invasive procedure that is the only therapy that addresses both the anatomy AND physiology of sleep apnea. The therapy works by gently stimulating select muscles of the tongue at night to allow the tongue base to move forward, widening the airway. This is achieved by implantation of a small electrode on a nerve branch that controls select tongue muscles.</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Lower Airway Surgery</h2>
+            <p>In many patients, significant airway collapse is seen at the level of the airway just above the vocal cords, including the back of the tongue, the epiglottis (a normal structure that helps to protect the airway when swallowing foods and liquids, and the lower side walls of the throat. There are very effective surgeries that can address these areas of collapse, and Dr. Phillips can provide the appropriate surgery to address the airway obstruction at this level. These surgeries include:
+
+                Hyomandibular Advancement (AirLift ® procedure)
+                Tongue Base Suspension
+                Genioglossus Advancement
+                Tracheostomy (in very rare cases only)</p>
+        </div>
+    </div>
+
+
+</body>
+</html>

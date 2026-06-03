@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>treat</title>
+</head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <a href="index.html"></a>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #f4f4f4, #ffffff);
+            margin: 0;
+            padding: 50px 20px;
+            color: #2c3e50;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Aligns boxes to the right */
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .treatment-box {
+            width: 50%;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        .treatment-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #1d3557;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #1d3557;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: #d62828;
+            margin-top: 5px;
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+            margin-top: 10px;
+        }
+
+        .disclaimer {
+            text-align: center;
+            width: 80%;
+            max-width: 900px;
+            background: rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            font-weight: 500;
+            font-size: 16px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out 0.5s forwards;
+        }
+
+        /* Hover & Fade-In Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .top-left{
+            position: absolute; /* Take the image out of the normal document flow */
+            top: 19%; /* Adjust top spacing as needed */
+            left: 3.5%; /* Adjust left spacing as needed */
+            width: 350px; /* Set a specific width (or height) */
+            height: auto; /* Maintain aspect ratio */
+            /* OR */
+            height: 350px; 
+            /* width: auto; */
+            z-index: 10; /* Ensure it's above other content */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+            border-radius:12px;
+        }
+        .top-left-2{
+            position: absolute; /* Take the image out of the normal document flow */
+            top: 19%; /* Adjust top spacing as needed */
+            left: 25%; /* Adjust left spacing as needed */
+            width: 350px; /* Set a specific width (or height) */
+            height: auto; /* Maintain aspect ratio */
+            /* OR */
+            height: 350px; 
+            /* width: auto; */
+            z-index: 10; /* Ensure it's above other content */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+            border-radius:12px;
+        }
+
+        .top-bottom{
+            position: absolute; /* Take the image out of the normal document flow */
+            top: 73%; /* Adjust top spacing as needed */
+            left: 15%; /* Adjust left spacing as needed */
+            width: 350px; /* Set a specific width (or height) */
+            height: auto; /* Maintain aspect ratio */
+            /* OR */
+            height: 350px; 
+            /* width: auto; */
+            z-index: 10; /* Ensure it's above other content */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+            border-radius:12px;
+        }
+
+
+    </style>
+    
+
+    <body>
+        
+
+
+        <div class="container-wrapper">
+            <img src="CPAP.png" class="top-left"><br>
+            <img src="oral.png" class="top-left-2">
+            <img src="positional_therapy.png" class="top-bottom">
+
+
+            <br><br><div class="treatment-box">
+                <h1>Primary/First-Line Treatments</h1>
+                <li><a href="CPAP.html" class="Symp hover-effect"><h2>CPAP (Continuous Positive Airway Pressure)</h2></a></li>
+                <p>CPAP delivers air pressure through a mask while you sleep, keeping your airway open...</p>
+                <li><a href="oral.html" class="Symp hover-effect"><h2>Oral Appliances</h2></a></li>
+
+                <p>These devices help keep the airway open by adjusting the jaw or tongue position...</p>
+            </div><br>
+    
+            <div class="treatment-box">
+                <h1>Secondary/Alternative Treatments</h1>
+                <li><a href="positional.html" class="Symp hover-effect"><h2>Positional Therapy</h2></a></li>
+                <p>For those with positional sleep apnea, avoiding sleeping on the back may help.</p>
+                <li><a href="surgery.html" class="Symp hover-effect"><h2>Surgery</h2></a></li>
+                <p>Considered when other treatments fail...</p>
+            </div>
+        </div><br><br>
+    
+        <div class="disclaimer">
+            <p><strong>Disclaimer:</strong> The information provided here is for educational purposes only...</p>
+        </div>
+
+
+    </body>
+    
+    
+</html>

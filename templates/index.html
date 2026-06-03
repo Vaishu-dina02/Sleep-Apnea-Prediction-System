@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApneaInsight360</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Added to center the header text */
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00447c;
+            text-align: left;
+            flex: 1;
+            cursor:pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+            justify-content: center; /* Centering the navigation links */
+            flex: 2;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            padding: 5px 10px;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #0072c6;
+        }
+
+        nav ul li a:visited {
+            color: black;  /* Keeps the color black after the link is clicked */
+        }
+
+        nav ul li a:active {
+            color: #0072c6; /* Change color on active state (while clicking) */
+        }
+
+        nav ul li a.hover-effect::after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 0;
+            background: #0072c6;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease-in-out;
+        }
+
+        nav ul li a.hover-effect:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 180px 20px;
+            background: #f4f4f4;
+            position: relative;
+            overflow: hidden; /* Prevent image from overflowing */
+            height:420px;
+        }
+        
+        .hero h1 {
+            font-size: 36px;
+            color: #00447c;
+            position: absolute;
+            bottom: 80px;
+            left: 0;
+            right: 0;
+            margin: 0;
+            z-index: 1; /* Ensure text is on top of image */
+            background-color: rgba(244, 244, 244, 0.5); /* Optional: Semi-transparent background for text */
+            padding: 10px; /* Optional: Add padding to the text */
+        }
+        
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Maintain aspect ratio and cover the entire box */
+            z-index: 0; /* Ensure image is behind the text */
+        }
+
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 130px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(0, 200, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: black;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid rgba(255, 0, 0, 0.5);
+            cursor: pointer;
+            box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.5);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.2);
+            box-shadow: 0px 10px 30px rgba(0, 200, 255, 0.8);
+        }
+
+        .chat-button:active {
+            transform: scale(0.9);
+        }
+
+        .Symp {
+            text-decoration: none;
+            list-style: none;
+            display: flex;
+            font-size: larger;
+            padding: 0;
+            margin: 0;
+            color: black; /* Default link color */
+            gap: 40px;
+            justify-content: center;
+        }
+        
+        .Symp li {
+            position: relative;
+        }
+        
+        .Symp li a {
+            text-decoration: none;
+            color: inherit; /* Inherit from .Symp (initially black) */
+            font-size: 16px;
+            padding: 5px 10px;
+            display: inline-block;
+            transition: color 0.3s, text-decoration 0.3s; /* Add transition for underline */
+        }
+        
+        .Symp li a:hover {
+            color: #0072c6; /* Blue on hover */
+        }
+        
+        .Symp li a:visited {
+            color: black;
+        }
+        
+        .Symp li a:active {
+            color: #0072c6;
+        }
+        
+        /* Underline effect */
+        .Symp li a.hover-effect:hover { /* Apply underline only on hover */
+            text-decoration: underline;
+            text-decoration-color: #0072c6;
+        }
+        
+        
+        .Symp li a[href="xxx.html"]:hover {
+            color: #0072c6; /* Blue on hover */
+        }
+        
+        .Symp li a[href="xxx.html"].hover-effect:hover {
+            text-decoration: underline;
+            text-decoration-color: #0072c6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ApneaInSight360</div>
+        <nav>
+            <ul>
+                <li><a href="/prediction" class="Symp hover-effect">Prediction AI</a></li>
+                <li><a href="static\symptoms.html" class="Symp hover-effect">Symptoms</a></li>
+                <li><a href="static\treat.html" class="Symp hover-effect">Treatment</a></li>
+                <li><a href="static\blogs_&_articles.html" class="Symp hover-effect">Blogs & Articles</a></li>
+                <li><a href="static\about.html" class="Symp hover-effect">About</a></li>
+                <li><a href="static\our_team.html" class="Symp hover-effect">Our Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="static\doctor_pexel_2.png"  class="hero-image">
+        <h1>We're here when you need us — for every care in the world.</h1>
+    </section>
+    
+    <button class="chat-button" id="aiChat">Sleep Apnea AI</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll("nav ul li a");
+            links.forEach(link => {
+                link.addEventListener("mouseenter", () => {
+                    link.classList.add("hover-effect");
+                });
+                link.addEventListener("mouseleave", () => {
+                    link.classList.remove("hover-effect");
+                });
+            });
+        });
+
+        
+    </script>
+</body>
+</html>

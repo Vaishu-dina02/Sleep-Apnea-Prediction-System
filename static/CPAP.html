@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPAP</title>
+    <a href="treat.html"></a>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 50px 20px;
+            color: #2c3e50;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            opacity: 0;
+            animation: fadeInPage 1.5s ease-in-out forwards;
+        }
+
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            max-width: 900px;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.75);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #1d3557;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #444;
+            margin-top: 5px;
+        }
+
+        /* Page Load Animation */
+        @keyframes fadeInPage {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Hover & Fade-In Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+
+    <div class="info-container">
+        <br><div class="info-box">
+            <h2>What is a CPAP Machine?</h2>
+            <p>CPAP machines treat sleep apnea by delivering continuous air pressure through a mask worn over the nose and/or mouth, keeping airways open during sleep. A CPAP machine consists of a mask, straps, a tube, a motor (which
+                blows air), and an air filter. Some have added features like humidifiers. CPAP
+                is the most common type of PAP (positive airway pressure) device. Other PAP
+                machines include auto CPAP (self-regulating pressure), Bi-level PAP (two
+                pressures - higher for inhalation, lower for exhalation), auto-bilevel PAP
+                (self-regulating inhalation and exhalation pressures), and ASV (adaptive
+                servo-ventilation) for central sleep apnea, which monitors breathing, adjusts
+                pressure, and can deliver breaths.  </p>
+        </div>
+
+        <div class="info-box">
+            <h2>What is a CPAP Machine Used For?</h2>
+            <p>CPAP machines are primarily used to treat obstructive sleep
+                apnea (OSA). OSA causes repeated breathing pauses during sleep due to airway
+                blockage, leading to oxygen deprivation and increasing the risk of heart
+                disease, high blood pressure, stroke, type 2 diabetes, and cognitive
+                impairment, as well as daytime sleepiness that increases the risk of accidents.
+                CPAP keeps airways open, preventing these pauses. CPAP is also used for other
+                breathing problems, such as in preterm infants with underdeveloped lungs.</p>
+        </div>
+
+        <div class="info-box">
+            <h2>What Does a CPAP Machine Do?</h2>
+            <p>A CPAP machine filters and pressurizes room air, delivering
+                it through a tube to a mask. This airflow keeps the tongue, uvula, and soft
+                palate from obstructing the airway, stabilizing breathing and improving sleep
+                quality. Consistent use during all sleep periods (home, travel, naps) is
+                essential for effective treatment, along with daily cleaning of the mask and
+                tube, and timely prescription refills for replacements.</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Types of CPAP Machines</h2>
+            <p>CPAP machines primarily differ based on mask type, which is
+                chosen based on comfort, breathing habits, and sleep apnea type. Mask options
+                include nasal masks (covering the nose, good for active sleepers), nasal pillow
+                masks (covering only nostrils, compatible with glasses), full masks (covering
+                nose and mouth, best for mouth breathers or nasal blockage), and hybrid masks
+                (a full mask with prongs or cushions sealing the nostrils without covering the
+                nasal bridge). Healthcare providers help patients choose the best mask type and
+                fit, and often, patients try several masks before finding the most comfortable
+                option.</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Risks & Benefits</h2>
+            <p>Consistent CPAP use for sleep apnea offers both short- and
+                long-term benefits. Short-term benefits include improved sleep quality, reduced
+                snoring, less daytime sleepiness, and improved mood. Long-term benefits may
+                include improved blood pressure, reduced cardiovascular disease risk (heart
+                attack, stroke), and improved cognitive function.</p>
+        </div>
+    </div>
+
+
+</body>
+</html>

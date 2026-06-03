@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleep Apnea Prediction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f4f4f4, #ffffff);
+      margin: 0;
+      padding: 50px 20px;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+
+    .form-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #1d3557;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: #333;
+      text-align: right;
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .form-control {
+      flex: 2;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .btn-primary {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      background-color: #d62828;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background-color: #e63946;
+    }
+
+    .prediction-result {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 20px;
+      color: #28a745;
+      font-weight: 600;
+    }
+
+    /* Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #d62828;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Sleep Apnea Prediction</h1>
+
+    <form method="POST" action="/predict">
+      
+      <div class="form-group">
+        <label for="age" class="form-label">Age:</label>
+        <input type="number" class="form-control" id="age" name="age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="sex" class="form-label">Sex (0 for Female, 1 for Male):</label>
+        <input type="number" class="form-control" id="sex" name="sex" required>
+      </div>
+
+      <div class="form-group">
+        <label for="height" class="form-label">Height (in cm):</label>
+        <input type="number" class="form-control" id="height" name="height" step="0.1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="weight" class="form-label">Weight (in kg):</label>
+        <input type="number" class="form-control" id="weight" name="weight" step="0.1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="pulse" class="form-label">Pulse:</label>
+        <input type="number" class="form-control" id="pulse" name="pulse" required>
+      </div>
+
+      <div class="form-group">
+        <label for="BPsys" class="form-label">Systolic Blood Pressure (BPsys):</label>
+        <input type="number" class="form-control" id="BPsys" name="BPsys" required>
+      </div>
+
+      <div class="form-group">
+        <label for="BPdia" class="form-label">Diastolic Blood Pressure (BPdia):</label>
+        <input type="number" class="form-control" id="BPdia" name="BPdia" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ODI" class="form-label">ODI:</label>
+        <input type="number" class="form-control" id="ODI" name="ODI" step="0.1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="NAp" class="form-label">NAp:</label>
+        <input type="number" class="form-control" id="NAp" name="NAp" step="0.1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="NHyp" class="form-label">NHyp:</label>
+        <input type="number" class="form-control" id="NHyp" name="NHyp" step="0.1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="AI" class="form-label">AI:</label>
+        <input type="number" class="form-control" id="AI" name="AI" step="0.1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="HI" class="form-label">HI:</label>
+        <input type="number" class="form-control" id="HI" name="HI" step="0.1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="snoringSound" class="form-label">Upload Snoring Sound (MP3, WAV):</label>
+        <input type="file" class="form-control" id="snoringSound" name="snoringSound" accept=".mp3, .wav" required>
+      </div>
+
+      <button type="submit" class="btn-primary">Predict AHI</button>
+    </form>
+
+    {% if prediction %}
+      <div class="prediction-result">
+        <h2>Predicted AHI: {{ prediction }}</h2>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>

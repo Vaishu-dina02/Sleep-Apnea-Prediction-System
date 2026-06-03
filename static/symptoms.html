@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptoms</title>
+</head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <a href="firstpage.html"></a>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #f4f4f4, #ffffff);
+            margin: 0;
+            padding: 50px 20px;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #1d3557;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 26px;
+            color: #1d3557;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: #d62828;
+            margin-top: 5px;
+            border-radius: 2px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 20px 0;
+            list-style: none;
+        }
+
+        ul li {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 12px;
+            padding-left: 40px;
+            position: relative;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+        }
+
+        ul li::before {
+            content: "●";
+            font-size: 22px;
+            color: #d62828;
+            position: absolute;
+            left: 0;
+            top: 3px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        ul li:hover {
+            color: #d62828;
+            transform: translateX(5px);
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #d62828;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            text-align: center;
+            margin-top: 30px;
+            font-weight: 500;
+        }
+
+        /* Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        
+        
+
+    </style>
+<body>
+
+    <div class="container fade-in">
+        <h1>Sleep Apnea Symptoms</h1>
+
+        <h2>While asleep, you may have these symptoms:</h2>
+        <ul>
+            <li>Breathing that starts and stops</li>
+            <li>Frequent <span class="highlight">loud snoring</span> (more common in men)</li>
+            <li>Gasping for air</li>
+        </ul>
+
+        <h2>You may not know you have these symptoms until someone tells you. Or you may notice the following yourself:</h2>
+        <ul>
+            <li>Daytime sleepiness and tiredness, leading to problems with learning, focusing, and reacting</li>
+            <li>Dry mouth</li>
+            <li><span class="highlight">Fatigue</span> (more common in women)</li>
+            <li>Headache (more common in women)</li>
+            <li>Insomnia (more common in women)</li>
+            <li>Sexual dysfunction or decreased libido</li>
+            <li>Waking up often during the night to urinate</li>
+        </ul>
+
+        <h2>Children with sleep apnea may experience:</h2>
+        <ul>
+            <li>Overactivity</li>
+            <li>Bedwetting</li>
+            <li>Worsening asthma</li>
+            <li>Trouble paying attention in school</li>
+        </ul><br><br>
+
+        <p>Talk to your healthcare provider about your symptoms. You may need a sleep study to help diagnose the condition.</p>
+    </div>
+
+    
+</body>
+</html>

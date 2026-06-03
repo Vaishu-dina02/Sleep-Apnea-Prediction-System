@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPAP</title>
+    <a href="treat.html"></a>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 50px 20px;
+            color: #2c3e50;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            opacity: 0;
+            animation: fadeInPage 1.5s ease-in-out forwards;
+        }
+
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            max-width: 900px;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.75);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #1d3557;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #444;
+            margin-top: 5px;
+        }
+
+        /* Page Load Animation */
+        @keyframes fadeInPage {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Hover & Fade-In Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+
+    <div class="info-container">
+        <br><div class="info-box">
+            <h2>What is Positional Obstructive Sleep Apnea?</h2>
+            <p>People who have sleep apnea have brief pauses in their breathing throughout the night. OSA is the most common type of this disorder and occurs when the tongue and soft tissues of the upper airway relax while you are sleeping. When they relax, they can block your airflow. Sleep apnea episodes involve the pause of breathing for a few seconds. During an episode, your oxygen levels decline, causing your sympathetic nervous system to respond and increase both your heart rate and blood pressure. Your breathing will then restart and might cause snoring.
+
+                Positional obstructive sleep apnea happens when most of the episodes are attributed to the position of sleep. If you sleep on your back, the size and shape of your airway will be altered. This position increases the chances of having an episode of sleep apnea.  </p>
+        </div>
+
+        <div class="info-box">
+            <h2>Complications of Untreated OSA</h2>
+            <p>People whose obstructive sleep apnea or positional obstructive sleep apnea are untreated will struggle to get enough rest and will often feel tired. However, OSA can also cause other severe consequences. Repeated drops in oxygen levels combined with increases in heart rate and blood pressure can place strain on the heart and circulatory system.
+
+                This can lead to the following complications:
+                
+                Stroke
+                Cardiac arrest
+                Type 2 diabetes
+                Motor vehicle accidents</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Treatment</h2>
+            <p>Treatments for sleep apnea might include the following:
+
+                Positional sleep therapy
+                Oral devices for sleep apnea
+                CPAP treatment
+                Lifestyle changes
+                Weight loss
+                Researchers have found that positional sleep therapy is just as effective for treating positional OSA as wearing an oral device. Another study of patients who received positional sleep therapy demonstrated that they showed a significant decline in the severity of episodes of positional OSA during the night over 12 weeks.
+                
+                Approximately 50% of people who have OSA have positional OSA, so altering the sleeping position might be beneficial for many people. Leaving any type of sleep apnea untreated carries health risks. The right treatment for you will depend on the type of apnea you have, the severity of your condition, your ability to comply with using therapeutic devices, and your personal preferences.
+                
+                The most successful treatment for people who suffer from OSA is the treatment to which they are most likely to adhere. Compliance with oral devices and CPAP machines is low. Thankfully, positional OSA might be treated with positional sleep therapy, which is non-invasive and much simpler for people to learn and adhere to.</p>
+        </div>
+
+        
+    </div>
+
+
+</body>
+</html>
